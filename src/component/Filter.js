@@ -23,8 +23,8 @@ const Filter = ({ onFilter, onSearch }) => {
           />
         </form>
         <div>
+          <label for="select"> </label>
           <select name="select" id="select" className="select" onChange={handleFilter}>
-              <label for="select">State:</label>
             <option value="">Filter By Region</option>
             <option value="Africa">Africa</option>
             <option value="Americas">America</option>
