@@ -14,7 +14,7 @@ const Filter = ({ onFilter, onSearch }) => {
   return (
     <>
       <section className="filter">
-        <form action="" className="form-control">
+        <form className="form-control">
           <input
             type="text"
             placeholder="Search for a country"
