@@ -1,13 +1,219 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Lexend+Deca:wght@300&family=Nunito+Sans:wght@300;600;800&display=swap');
+:root{
+  --DarkBlue: hsl(209, 23%, 22%);
+  --Very_Dark_Blue : hsl(207, 26%, 17%);
+  --Very_Dark_Blue2: hsl(200, 15%, 8%);
+  --Dark_Gray: hsl(0, 0%, 52%);
+  --Very_Light_Gray: hsl(0, 0%, 98%);
+  --White : hsl(0, 0%, 100%);
+}
+body.light-theme{
+
+  --DarkBlue: hsl(0, 0%, 100%);
+  --Very_Dark_Blue : hsl(0, 0%, 98%);
+  --Very_Dark_Blue2: hsl(200, 15%, 8%);
+  --Dark_Gray: hsl(0, 0%, 52%);
+  --Very_Light_Gray: hsl(207, 26%, 17%);
+  --White :hsl(209, 23%, 22%); 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+font-family: 'Nunito Sans', sans-serif;
+background-color: var(--Very_Dark_Blue);
+color: var(--White);
+}
+/*header*/
+.header{
+justify-content: space-between;
+display: flex;
+align-items: center;
+background-color: var(--DarkBlue);
+padding: 20px;
+margin-bottom: 20px;
+}
+i{
+margin-right: 5px;
+cursor: pointer;
+}
+/*filter*/
+.filter{
+margin: 0rem 4rem ;
+justify-content: space-between;
+display: flex;
+align-items: center;
+padding: 20px 0px;
+margin-bottom: 30px;
+}
+.filter .form-control input{
+background-color: var(--DarkBlue);
+border: none;
+border-radius: 5px;
+padding: 12px;
+color: var(--White);
+font-family: inherit;
+letter-spacing: 0.5px;
+width: 400px;
+}
+.filter .form-control ::placeholder{
+color: var(--White);
+}
+
+.filter .select{
+width: 100%;
+padding: 12px;
+background-color: var(--DarkBlue);
+color: var(--White);
+border: none;
+font-family: inherit;
+border-radius: 5px;
+
+}
+.btn:hover{
+background-color: #fff;
+color: var( --Very_Dark_Blue);
+}
+/*country*/
+.btn-light{
+background-color: var( --DarkBlue);
+color: var(--White);
+padding: 0.5rem 0.9rem;
+border: solid var( --Very_Dark_Blue) o0.5px;
+margin-left: 2rem;
+border-radius: 5px;
+justify-content: center;
+}
+.country-box{
+  display: flex;
+  margin: 5rem;
+  height: 15rem;
+  padding: 1rem;
+ 
+}
+.country-box p{
+ margin: 10px;
+ font-weight: 700;
+}
+.border-box{
+  border: solid 0.5px var(--Very_Light_Gray);
+  width: fit-content;
+  float: left;
+  margin-left: 12px;
+  padding: 3px;
+}
+.country-box span{
+  margin: 10px;
+  font-weight: 300;
+ }
+ .aboutCountry{
+  display: flex;
+ }
+
+.flag img{
+  height: 17rem;
+  width: 25rem;
+  margin-right: 2rem;
+  }
+
+/*countries*/
+.grid article img{
+height: 180px;
+width: 100%;
+border-radius: 5px 5px 0px 0px;
+}
+article{
+box-shadow: 0 10px 10px rgba(9, 17, 22, 0.5);
+height: fit-content;
+}
+.grid .details{
+background-color: var(--DarkBlue);
+padding: 10px;
+height: 50%;
+width: 100%;
+margin-top: -10px;
+border-radius: 0px 0px 5px 5px;
+cursor: pointer;
+}
+.grid{
+margin: 0rem 4rem;
+display: grid;
+grid-template-columns: 1fr;
+gap: 40px;
+}
+article h3{
+padding-bottom: 10px;
+}
+article h4{
+padding-bottom: 5px;
+}
+.grid .details h4 span{
+font-weight: 300;
+margin-right: 1px;
+
+}
+@media (max-width: 600px) {
+.filter{
+  flex-direction: column;
+  justify-content: left;
+  align-items:flex-start;
+  gap: 15px;
+}
+.filter .form-control{
+  width: 100%;
+}
+.country-box{
+  display: grid;
+  height: 10rem;
+  padding: 1rem;
+  margin: 0;
+ 
+}
+.flag img{
+  height: 12rem;
+  width: 18rem;
+  margin-right: 2rem;
+  }
+
+
+}
+
+@media (min-width: 640px) {
+.grid{
+  grid-template-columns: repeat(2, 1fr);
+}
+.filter{
+  flex-direction: column;
+  justify-content: left;
+  align-items:flex-start;
+  gap: 15px;
+}
+}
+@media (min-width: 768px) { 
+.grid{
+  grid-template-columns: repeat(3, 1fr);
+}
+.filter{
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+}
+@media (min-width: 992px) {
+body{
+  padding: 0px 0px;
+}
+.grid{
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+.filter{
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+
 }
