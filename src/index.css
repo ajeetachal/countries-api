@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Lexend+Deca:wght@300&family=Nunito+Sans:wght@300;600;800&display=swap');
-:root{
+ body.light-theme{
   --DarkBlue: hsl(209, 23%, 22%);
   --Very_Dark_Blue : hsl(207, 26%, 17%);
   --Very_Dark_Blue2: hsl(200, 15%, 8%);
@@ -7,7 +7,7 @@
   --Very_Light_Gray: hsl(0, 0%, 98%);
   --White : hsl(0, 0%, 100%);
 }
-body.light-theme{
+:root{
 
   --DarkBlue: hsl(0, 0%, 100%);
   --Very_Dark_Blue : hsl(0, 0%, 98%);
